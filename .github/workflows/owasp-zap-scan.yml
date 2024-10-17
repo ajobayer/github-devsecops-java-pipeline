@@ -8,11 +8,11 @@ jobs:
     name: Scan the web applications (OWASP ZAP)
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@master
         with:
           ref: master
       - name: OWASP ZAP Scan
-        uses: zaproxy/action-baseline@v0.6.1
+        uses: zaproxy/action-baseline@master
         with:
           docker_name: 'owasp/zap2docker-stable'
           target: 'http://testphp.vulnweb.com/'
